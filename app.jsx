@@ -24,12 +24,12 @@ const Crown = ({ className }) => <Icon className={className}><path d="M11.562 3.
 // Conference days only (May 12 Tuesday + May 13 Wednesday). Workshops excluded.
 // ============================================================
 const SCHEDULE = [
+
   // ============== TUESDAY MAY 12 ==============
-  // Keynote 08:30-09:30 (3 rooms - same session)
+  // 08:30-09:30
   { id: "1130102", day: "Tue", date: "2026-05-12", start: "08:30", end: "09:30", room: "Room 8", title: "Beyond the AI Hype: What's Real, What's Next", speakers: ["Richard Campbell"], track: "AI & Agents", level: "Intermediate", isKeynote: true },
   { id: "1212569", day: "Tue", date: "2026-05-12", start: "08:30", end: "09:30", room: "Room 5", title: "Beyond the AI Hype: What's Real, What's Next (Overflow 1)", speakers: ["Richard Campbell"], track: "AI & Agents", level: "Intermediate", isKeynote: true },
   { id: "1212570", day: "Tue", date: "2026-05-12", start: "08:30", end: "09:30", room: "Room 9", title: "Beyond the AI Hype: What's Real, What's Next (Overflow 2)", speakers: ["Richard Campbell"], track: "AI & Agents", level: "Intermediate", isKeynote: true },
-
   // 09:45-10:45
   { id: "1134626", day: "Tue", date: "2026-05-12", start: "09:45", end: "10:45", room: "Room 1", title: "You're Not Just Tired: The Psychology of Burnout", speakers: ["Arthur Doler"], track: "Architecture & Leadership", level: "Intermediate" },
   { id: "1139675", day: "Tue", date: "2026-05-12", start: "09:45", end: "10:45", room: "Room 10", title: "Copilot Loves SharePoint", speakers: ["Todd Klindt"], track: "Workplace & Productivity", level: "Introductory and overview" },
@@ -41,37 +41,32 @@ const SCHEDULE = [
   { id: "1149847", day: "Tue", date: "2026-05-12", start: "09:45", end: "10:45", room: "Room 7", title: "Going Passwordless - A Practical Guide to Passkeys in ASP.NET Core", speakers: ["Maarten Balliauw"], track: "Dev", level: "Introductory and overview" },
   { id: "1139988", day: "Tue", date: "2026-05-12", start: "09:45", end: "10:45", room: "Room 8", title: "Next-Gen AI Apps with .NET 10: Models, Data, Agents, and MCP Servers", speakers: ["Jon Galloway"], track: "AI & Agents", level: "Intermediate" },
   { id: "1117212", day: "Tue", date: "2026-05-12", start: "09:45", end: "10:45", room: "Room 9", title: "The road to a faster ReSharper", speakers: ["Kevin Gosse"], track: "Dev", level: "Intermediate" },
-
-  // 10:50-11:10 (lightning)
+  // 10:50-11:10
   { id: "1203284", day: "Tue", date: "2026-05-12", start: "10:50", end: "11:10", room: "Room 8", title: "Building Castles for Many Lords: Multitenancy in Practice", speakers: ["Jerry Van Echelpoel"], track: "Architecture & Leadership", level: "Introductory and overview", isLightning: true },
-
   // 11:15-12:15
   { id: "1127332", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 1", title: "Kindness in tech", speakers: ["Kathleen Dollard"], track: "Architecture & Leadership", level: "Introductory and overview" },
-  { id: "1187902", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 10", title: "What the Scrolls Didn't Say: A Real-World Microsoft Agent Framework Quest", speakers: ["Frederiek Vandepitte", "Wouter Bauchart"], track: "AI & Agents", level: "Introductory and overview" },
+  { id: "1134485", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 10", title: "Optimistic Security", speakers: ["Niall Merrigan"], track: "Architecture & Leadership", level: "Introductory and overview" },
   { id: "1125344", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 11", title: "From Localhost to Multi-Cloud: Building Production-Ready Apps with DocumentDB", speakers: ["Mark Brown"], track: "Data", level: "Intermediate" },
   { id: "1110638", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 13", title: "Shift Left on Non-Functionals: Continuous Validation with Azure", speakers: ["Tom van den Berg"], track: "Cloud & DevOps", level: "Intermediate" },
-  { id: "1172950", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 4", title: "Safe by Design — Guardrails and Evals for Production LLM Systems", speakers: ["Hampton Paulk"], track: "AI & Agents", level: "Intermediate" },
+  { id: "1172951", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 4", title: "Confident and Wrong — Detecting LLM Hallucinations in Production", speakers: ["Hampton Paulk"], track: "AI & Agents", level: "Intermediate" },
   { id: "1100746", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 5", title: "BYOAI - Build your own... Aspire Integration?!", speakers: ["Maddy Montaquila"], track: "Dev", level: "Intermediate" },
   { id: "1130300", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 6", title: "Git Scenarios: How Do I Fix That?", speakers: ["Rob Richardson"], track: "Dev", level: "Intermediate" },
   { id: "1132799", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 7", title: "Uniting divided MCP appdoms with OAuth and Cross App Access", speakers: ["Alisa Duncan"], track: "Dev", level: "Intermediate" },
   { id: "1110919", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 8", title: "Productivity Tips and Tricks in Visual Studio", speakers: ["Leslie Richardson"], track: "Dev", level: "Introductory and overview" },
   { id: "1132694", day: "Tue", date: "2026-05-12", start: "11:15", end: "12:15", room: "Room 9", title: "Lead your team like a knight!", speakers: ["Hannes Lowette"], track: "Architecture & Leadership", level: "Intermediate" },
-
-  // 12:30-12:50 (lightning)
+  // 12:30-12:50
   { id: "1187219", day: "Tue", date: "2026-05-12", start: "12:30", end: "12:50", room: "Room 8", title: "The node_modules Iceberg: Mysteries Below the Waterline", speakers: ["Chris DeMars"], track: "Dev", level: "Intermediate", isLightning: true },
-
   // 13:15-14:15
   { id: "1133525", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 1", title: "Hard lessons learned from a decade of architecting software on the cloud", speakers: ["Marilag Dimatulac Svennevig"], track: "Architecture & Leadership", level: "Intermediate" },
   { id: "1131279", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 10", title: "Airport Quest: Relationship-Based Access Control with OpenFGA", speakers: ["Sander Molenkamp"], track: "Dev", level: "Advanced" },
   { id: "1190012", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 11", title: "Secure Hosting of Legacy Applications on Azure", speakers: ["Bart Demeulenaere"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1127826", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 13", title: "Beyond pair programming: Autonomous development with SpecKit and Ralph", speakers: ["Hidde de Smet"], track: "AI & Agents", level: "Introductory and overview" },
   { id: "1090037", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 4", title: "Designing REST APIs for the age of AI agents", speakers: ["Boyan Mihaylov"], track: "Dev", level: "Advanced" },
-  { id: "1134742", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 5", title: "OpenCode: Control your coding agent and your data", speakers: ["Geert van der Cruijsen"], track: "AI & Agents", level: "Intermediate" },
+  { id: "1134742", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 5", title: "Taking Control of Coding Agents with OpenCode and OpenSpec", speakers: ["Geert van der Cruijsen"], track: "AI & Agents", level: "Intermediate" },
   { id: "1135488", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 6", title: "Building the Ultimate Safety Net with Integration Tests", speakers: ["Jimmy Bogard"], track: "Dev", level: "Intermediate" },
   { id: "1187310", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 7", title: "Agentic CI/CD: Azure DevOps vs GitHub Agentic Workflows", speakers: ["Thibaut De Cremer"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1108850", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 8", title: "Inside GPT – Large Language Models Demystified", speakers: ["Alan Smith"], track: "AI & Agents", level: "Advanced" },
   { id: "1132188", day: "Tue", date: "2026-05-12", start: "13:15", end: "14:15", room: "Room 9", title: "Clean Architecture for Blazor in the Real World", speakers: ["Johan Smarius"], track: "Dev", level: "Intermediate" },
-
   // 14:30-15:30
   { id: "1144575", day: "Tue", date: "2026-05-12", start: "14:30", end: "15:30", room: "Room 1", title: "Building reliable applications / What we can learn from the Three Little Pigs", speakers: ["Sergey Bykov"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1089555", day: "Tue", date: "2026-05-12", start: "14:30", end: "15:30", room: "Room 10", title: "ASP.NET Core, from DEV to PRD", speakers: ["Wesley Cabus"], track: "Dev", level: "Intermediate" },
@@ -83,10 +78,8 @@ const SCHEDULE = [
   { id: "1089960", day: "Tue", date: "2026-05-12", start: "14:30", end: "15:30", room: "Room 7", title: "Make Your SQL Server Queries Faster Than Your Neighbour's", speakers: ["Pinal Dave"], track: "Data", level: "Introductory and overview" },
   { id: "1094506", day: "Tue", date: "2026-05-12", start: "14:30", end: "15:30", room: "Room 8", title: "Build an MCP Server in C#", speakers: ["Rockford Lhotka"], track: "AI & Agents", level: "Introductory and overview" },
   { id: "1116183", day: "Tue", date: "2026-05-12", start: "14:30", end: "15:30", room: "Room 9", title: "Beyond Pub/Sub - Advanced Messaging Patterns", speakers: ["Poornima Nayar"], track: "Architecture & Leadership", level: "Intermediate" },
-
-  // 15:35-15:55 (lightning)
+  // 15:35-15:55
   { id: "1176988", day: "Tue", date: "2026-05-12", start: "15:35", end: "15:55", room: "Room 8", title: "Reusing DevOps Steps, Jobs, Stages, and Pipelines across your company projects", speakers: ["Jorren Schepers", "Wannes Maes"], track: "Cloud & DevOps", level: "Intermediate", isLightning: true },
-
   // 16:00-17:00
   { id: "1154699", day: "Tue", date: "2026-05-12", start: "16:00", end: "17:00", room: "Room 1", title: "Agent-Ready Frontends: A Development Guide", speakers: ["Vuong Ha"], track: "Dev", level: "Intermediate" },
   { id: "1130751", day: "Tue", date: "2026-05-12", start: "16:00", end: "17:00", room: "Room 10", title: "Securing Modern Workloads with Entra Agent ID", speakers: ["Sergey Chubarov"], track: "Cloud & DevOps", level: "Intermediate" },
@@ -98,7 +91,6 @@ const SCHEDULE = [
   { id: "1110545", day: "Tue", date: "2026-05-12", start: "16:00", end: "17:00", room: "Room 7", title: "Testing smarter: Bringing AI into your E2E testing workflows", speakers: ["Elio Struyf"], track: "Dev", level: "Intermediate" },
   { id: "1191767", day: "Tue", date: "2026-05-12", start: "16:00", end: "17:00", room: "Room 8", title: "From Single Agents to Systems: Designing Multi-Agent Architecture", speakers: ["Sakari Nahi"], track: "AI & Agents", level: "Intermediate" },
   { id: "1135051", day: "Tue", date: "2026-05-12", start: "16:00", end: "17:00", room: "Room 9", title: "Azure Virtual Networks for developers", speakers: ["Rik Hepworth"], track: "Cloud & DevOps", level: "Intermediate" },
-
   // 17:15-18:15
   { id: "1089504", day: "Tue", date: "2026-05-12", start: "17:15", end: "18:15", room: "Room 1", title: "How Microfrontends Let Your Teams Ship Fast Without Breaking Things", speakers: ["Dante De Ruwe"], track: "Architecture & Leadership", level: "Intermediate" },
   { id: "1134624", day: "Tue", date: "2026-05-12", start: "17:15", end: "18:15", room: "Room 10", title: "Build an agent into any app with the GitHub Copilot SDK", speakers: ["Bart Wullems"], track: "AI & Agents", level: "Intermediate" },
@@ -114,16 +106,15 @@ const SCHEDULE = [
   // ============== WEDNESDAY MAY 13 ==============
   // 08:30-09:30
   { id: "1110635", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 1", title: ".NET supply chain: Protecting against hidden threats", speakers: ["Tom van den Berg"], track: "Dev", level: "Intermediate" },
-  { id: "1139671", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 10", title: "Getting the most out of the SharePoint Knowledge Agent", speakers: ["Todd Klindt"], track: "Workplace & Productivity", level: "Introductory and overview" },
+  { id: "1134008", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 10", title: "Putting the AI in .NET MAUI", speakers: ["Shaun Lawrence"], track: "AI & Agents", level: "Intermediate" },
   { id: "1152740", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 11", title: "Hack the Castle: Timeless Parallels in Security", speakers: ["Joachim Dekker"], track: "Architecture & Leadership", level: "Introductory and overview" },
   { id: "1187412", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 13", title: "From Autocomplete to Orchestrators", speakers: ["Angelo Dejaeghere"], track: "AI & Agents", level: "Introductory and overview" },
   { id: "1135451", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 4", title: "Hybrid Caching in .NET", speakers: ["Jody Donetti"], track: "Dev", level: "Intermediate" },
   { id: "1089963", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 5", title: "Database Worst Practices by Gen AI", speakers: ["Pinal Dave"], track: "Data", level: "Introductory and overview" },
-  { id: "1134485", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 6", title: "Optimistic Security", speakers: ["Niall Merrigan"], track: "Architecture & Leadership", level: "Introductory and overview" },
+  { id: "1139671", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 6", title: "Getting the most out of the SharePoint Knowledge Agent", speakers: ["Todd Klindt"], track: "Workplace & Productivity", level: "Introductory and overview" },
   { id: "1094509", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 7", title: "Building Collaborative Agents with Microsoft Agent Framework", speakers: ["Rockford Lhotka"], track: "AI & Agents", level: "Introductory and overview" },
   { id: "1127338", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 8", title: "Staying sane when writing Roslyn incremental source generators", speakers: ["Kathleen Dollard"], track: "Dev", level: "Advanced" },
-  { id: "1131282", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 9", title: "Eco Mode: Building Green Solutions on Azure", speakers: ["Sander Molenkamp"], track: "Cloud & DevOps", level: "Intermediate" },
-
+  { id: "1217618", day: "Wed", date: "2026-05-13", start: "08:30", end: "09:30", room: "Room 9", title: "Best Friends Forever: BFF and Single-Page Applications", speakers: ["Christian Wenz"], track: "Dev", level: "Intermediate" },
   // 09:45-10:45
   { id: "1148545", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 1", title: "From idea to prompt to production-ready code? How AI-powered platforms can help you building apps.", speakers: ["Elio Struyf"], track: "AI & Agents", level: "Introductory and overview" },
   { id: "1133266", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 10", title: "Ctrl+Alt+Resilient: Always-On Analytics Workloads on Azure", speakers: ["Kristof Rennen", "Wesley Backelant"], track: "Architecture & Leadership", level: "Intermediate" },
@@ -132,40 +123,35 @@ const SCHEDULE = [
   { id: "1111316", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 4", title: "Prompt Engineering for Copilot Studio: Getting the Best Results from Your Agents", speakers: ["Christina Wheeler"], track: "Workplace & Productivity", level: "Intermediate" },
   { id: "1100717", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 5", title: "Deploying with Aspire to any cloud", speakers: ["Maddy Montaquila"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1133341", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 6", title: "The Unbearable Weight of Architecture", speakers: ["David Whitney"], track: "Architecture & Leadership", level: "Intermediate" },
-  { id: "1150573", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 7", title: "React Client vs Server: Showdown at Render Creek", speakers: ["Roland Guijt"], track: "Dev", level: "Intermediate" },
+  { id: "1131282", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 7", title: "Eco Mode: Building Green Solutions on Azure", speakers: ["Sander Molenkamp"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1139994", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 8", title: "Updating Legacy Apps to Modern .NET", speakers: ["Jon Galloway"], track: "Dev", level: "Intermediate" },
   { id: "1096509", day: "Wed", date: "2026-05-13", start: "09:45", end: "10:45", room: "Room 9", title: "Lessons learned from translating parameterized collections in EF Core", speakers: ["Jiří Činčura"], track: "Dev", level: "Intermediate" },
-
-  // 10:50-11:10 (lightning)
+  // 10:50-11:10
   { id: "1184175", day: "Wed", date: "2026-05-13", start: "10:50", end: "11:10", room: "Room 8", title: "Self-Driving SDLC", speakers: ["Rahul Sinha"], track: "Architecture & Leadership", level: "Intermediate", isLightning: true },
-
   // 11:15-12:15
-  { id: "1129290", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 1", title: "Turning microservice chaos into a beautiful concerto", speakers: ["Marc Duiker"], track: "Dev", level: "Advanced" },
-  { id: "1134008", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 10", title: "Putting the AI in .NET MAUI", speakers: ["Shaun Lawrence"], track: "AI & Agents", level: "Intermediate" },
+  { id: "1112095", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 1", title: "Securing ASP.NET Core Today: Lessons from the New OWASP Top 10", speakers: ["Christian Wenz"], track: "Dev", level: "Intermediate" },
+  { id: "1187902", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 10", title: "What the Scrolls Didn't Say: A Real-World Microsoft Agent Framework Quest", speakers: ["Frederiek Vandepitte", "Wouter Bauchart"], track: "AI & Agents", level: "Introductory and overview" },
   { id: "1132724", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 11", title: "Durable Execution — a quiet revolution in building software and AI", speakers: ["Sergey Bykov"], track: "Dev", level: "Intermediate" },
   { id: "1131499", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 13", title: "Building Resilient Azure Cosmos DB Kingdoms", speakers: ["Theodorus Leonardus van Kraay"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1180361", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 4", title: "Writing .NET Tests with GitHub Copilot in Visual Studio and VS Code", speakers: ["Leslie Richardson"], track: "Dev", level: "Intermediate" },
-  { id: "1120098", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 5", title: "The Therac-25: Software that Kills", speakers: ["Kyle Kotowick"], track: "Architecture & Leadership", level: "Introductory and overview" },
+  { id: "1120098", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 5", title: "MALFUNCTION 54: The Deadly Software of the Therac-25", speakers: ["Kyle Kotowick"], track: "Architecture & Leadership", level: "Introductory and overview" },
   { id: "1153084", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 6", title: "Building Agents with Agents", speakers: ["Nir Mashkowski"], track: "AI & Agents", level: "Intermediate" },
-  { id: "1108843-w", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 7", title: "AI Agents In-Depth – Function Calling, MCP and Tool Use Under the Hood", speakers: ["Alan Smith"], track: "AI & Agents", level: "Advanced" },
+  { id: "1150573", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 7", title: "React Client vs Server: Showdown at Render Creek", speakers: ["Roland Guijt"], track: "Dev", level: "Intermediate" },
   { id: "1135491", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 8", title: "OpenTelemetry in a Brownfield World", speakers: ["Jimmy Bogard"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1118546", day: "Wed", date: "2026-05-13", start: "11:15", end: "12:15", room: "Room 9", title: "Forging Curated Data in the Age of Castles and Guilds", speakers: ["Nico Jacobs"], track: "Data", level: "Intermediate" },
-
-  // 12:30-12:50 (lightning)
+  // 12:30-12:50
   { id: "1179191", day: "Wed", date: "2026-05-13", start: "12:30", end: "12:50", room: "Room 8", title: "bUnit: how to love and not fear Unit testing Blazor Components", speakers: ["Jorn Hendrickx"], track: "Dev", level: "Introductory and overview", isLightning: true },
-
   // 13:15-14:15
   { id: "1154875", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 1", title: "The Well-Architected Architect - Building Secure, Reliable, Cost-efficient Solutions on Azure", speakers: ["Chris Ayers"], track: "Cloud & DevOps", level: "Intermediate" },
-  { id: "1172951", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 10", title: "Confident and Wrong — Detecting LLM Hallucinations in Production", speakers: ["Hampton Paulk"], track: "AI & Agents", level: "Intermediate" },
+  { id: "1172950", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 10", title: "Safe by Design — Guardrails and Evals for Production LLM Systems", speakers: ["Hampton Paulk"], track: "AI & Agents", level: "Intermediate" },
   { id: "1134640", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 11", title: "Boredom-Driven Development: The Dark Bargain at the Heart of Software", speakers: ["Arthur Doler"], track: "Architecture & Leadership", level: "Intermediate" },
-  { id: "1112095", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 13", title: "Securing ASP.NET Core Today: Lessons from the New OWASP Top 10", speakers: ["Christian Wenz"], track: "Dev", level: "Intermediate" },
+  { id: "1129290", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 13", title: "Turning microservice chaos into a beautiful concerto", speakers: ["Marc Duiker"], track: "Dev", level: "Advanced" },
   { id: "1134453", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 4", title: "The Modular Monolith: Structure Without the Microservice Madness", speakers: ["Peter Himschoot"], track: "Dev", level: "Intermediate" },
   { id: "1117216", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 5", title: "The hidden life of method calls", speakers: ["Kevin Gosse"], track: "Dev", level: "Intermediate" },
   { id: "1130103", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 6", title: "The Undersea Infrastructure", speakers: ["Richard Campbell"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1122832", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 7", title: "Modern Cybersecurity Failures: Skills and Misconfigurations That Define the Battlefield", speakers: ["Paula Januszkiewicz"], track: "Architecture & Leadership", level: "Intermediate" },
   { id: "1089406", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 8", title: "Change is inevitable: versioning event-driven systems", speakers: ["Laila Bougria"], track: "Architecture & Leadership", level: "Advanced" },
   { id: "1122723", day: "Wed", date: "2026-05-13", start: "13:15", end: "14:15", room: "Room 9", title: "Building Git in 60 Minutes To See How It Works", speakers: ["Stijn Castelyns"], track: "Dev", level: "Intermediate" },
-
   // 14:30-15:30
   { id: "1117539", day: "Wed", date: "2026-05-13", start: "14:30", end: "15:30", room: "Room 1", title: "Introduction to fine tuning and evaluations in Microsoft Foundry", speakers: ["Vincent Biret"], track: "AI & Agents", level: "Intermediate" },
   { id: "1096724", day: "Wed", date: "2026-05-13", start: "14:30", end: "15:30", room: "Room 10", title: "Let the spec speak: Building intelligent tests with Gherkin and Playwright", speakers: ["Elio Struyf", "Luise Freese"], track: "Dev", level: "Intermediate" },
@@ -177,24 +163,20 @@ const SCHEDULE = [
   { id: "1124216", day: "Wed", date: "2026-05-13", start: "14:30", end: "15:30", room: "Room 7", title: "Implementing Azure Policies: Before the Portal", speakers: ["Barbara Forbes"], track: "Cloud & DevOps", level: "Intermediate" },
   { id: "1119665", day: "Wed", date: "2026-05-13", start: "14:30", end: "15:30", room: "Room 8", title: "Azure Service Bus - Behind the scenes", speakers: ["Clemens Vasters"], track: "Architecture & Leadership", level: "Intermediate" },
   { id: "1196414", day: "Wed", date: "2026-05-13", start: "14:30", end: "15:30", room: "Room 9", title: "From coder to conductor: let AI agents execute while you decide", speakers: ["Nicolas VYT"], track: "AI & Agents", level: "Advanced" },
-
   // 16:00-17:00
   { id: "1095491", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 1", title: "Surviving the Dual-Write Problem in Distributed Systems", speakers: ["Sohan Maheshwar"], track: "Architecture & Leadership", level: "Advanced" },
   { id: "1135688", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 10", title: "Stop Copy-Pasting Your Build Configuration", speakers: ["Matthias Koch"], track: "Dev", level: "Intermediate" },
   { id: "1133221", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 11", title: "Zero trust in the age of Ai Agents", speakers: ["Adnan Hendricks"], track: "AI & Agents", level: "Introductory and overview" },
-  { id: "1131440", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 13", title: "Take Control: Agent Governance in Microsoft 365", speakers: ["Thomas Vochten"], track: "Workplace & Productivity", level: "Introductory and overview" },
   { id: "1089505", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 4", title: "The Fun Side of Advanced TypeScript: An Interactive Coding Session", speakers: ["Dante De Ruwe"], track: "Dev", level: "Advanced" },
   { id: "1134048", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 5", title: "Forging an impenetrable armor for your Angular app", speakers: ["Alisa Duncan"], track: "Dev", level: "Advanced" },
   { id: "1135054", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 6", title: "Much ado about Geo-Redundancy", speakers: ["Rik Hepworth"], track: "Cloud & DevOps", level: "Intermediate" },
-  { id: "1143239", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 7", title: "Beyond the Text Box: Rethinking Your Product's AI Surface Area", speakers: ["Den Delimarsky"], track: "AI & Agents", level: "Introductory and overview" },
+  { id: "1131440", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 7", title: "Take Control: Agent Governance in Microsoft 365", speakers: ["Thomas Vochten"], track: "Workplace & Productivity", level: "Introductory and overview" },
   { id: "1134303", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 8", title: "I Didn't Know the CLR JIT Could Do That!", speakers: ["Bart De Smet"], track: "Dev", level: "Expert" },
   { id: "1143100", day: "Wed", date: "2026-05-13", start: "16:00", end: "17:00", room: "Room 9", title: "Beyond DDD vs EA: Architecting Autonomous Landscapes That Actually Scale", speakers: ["Dwight Matthys"], track: "Architecture & Leadership", level: "Advanced" },
-
-  // 17:15-18:15 closing keynote
+  // 17:15-18:15
   { id: "1192267", day: "Wed", date: "2026-05-13", start: "17:15", end: "18:15", room: "Room 8", title: "How 5000 years of history is shaping the AI era", speakers: ["Tom Van De Weghe"], track: "AI & Agents", level: "Introductory and overview", isKeynote: true },
   { id: "1212566", day: "Wed", date: "2026-05-13", start: "17:15", end: "18:15", room: "Room 5", title: "How 5000 years of history is shaping the AI era (Overflow 1)", speakers: ["Tom Van De Weghe"], track: "AI & Agents", level: "Introductory and overview", isKeynote: true },
-  { id: "1212567", day: "Wed", date: "2026-05-13", start: "17:15", end: "18:15", room: "Room 9", title: "How 5000 years of history is shaping the AI era (Overflow 2)", speakers: ["Tom Van De Weghe"], track: "AI & Agents", level: "Introductory and overview", isKeynote: true },
-];
+  { id: "1212567", day: "Wed", date: "2026-05-13", start: "17:15", end: "18:15", room: "Room 9", title: "How 5000 years of history is shaping the AI era (Overflow 2)", speakers: ["Tom Van De Weghe"], track: "AI & Agents", level: "Introductory and overview", isKeynote: true },];
 
 const DAYS = [
   { key: "Tue", label: "Tuesday", date: "May 12", iso: "2026-05-12" },

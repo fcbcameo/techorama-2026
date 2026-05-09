@@ -1,5 +1,5 @@
 // Techorama 2026 Schedule — service worker for offline support
-const CACHE_NAME = "techorama-2026-v2";
+const CACHE_NAME = "techorama-2026-v3";
 const ASSETS = [
   "./",
   "./index.html",
